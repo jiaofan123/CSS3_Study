@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指定渐变色的起始点和使用多个颜色</title>
+    <style >
+        div{
+            width: 400px;
+            height: 400px;
+            border: 2px solid #abcdef;
+            margin: 50px;
+        }
+        .box1{
+            background-image: linear-gradient(to right,red,yellow);
+        }
+        .box2{
+            background-image: linear-gradient(to right,red 50%,yellow 50%);
+        }
+        .box3{
+            background-image: linear-gradient(to right,red 100px,yellow 300px);/*开始渐变的位置100px结束渐变的位置300px*/
+        }
+        .box4{
+            background-image: linear-gradient(red 200px,yellow 300px, blue 400px);
+        }
+        .box5{
+            background-image: linear-gradient(to top,red,rgba(0,0,0,0),yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+</html>

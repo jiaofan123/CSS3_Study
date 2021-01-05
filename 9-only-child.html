@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only-child</title>
+</head>
+<style type="text/css">
+     .box1 p:only-child{ /*只有第一个只有一个p标签的div有样式*/
+         color:hotpink
+     }
+     .test1 h2:only-of-type{ /*如果再增加一个h2 两个h2都不会有样式*/
+         color:yellowgreen
+     }
+</style>
+<body>
+    <div class="box1">
+        <p>hello jiao</p>
+    </div>
+    <div class="box1">
+        <p>hello jiao 1</p>
+        <p>hello jiao 2</p>
+    </div>
+    <div class="test1">
+        <h1>01</h1>
+        <h1>02</h1>
+        <h1>03</h1>
+        <h2>1</h2>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read-only read-write</title>
+    <style type="text/css">
+        .test1:-moz-read-only {
+            /*主要针对火狐的加一个moz的前缀*/
+            border: 1px solid red;
+        }
+        .test1:read-only {
+            border: 1px solid red;
+        }
+        .test1:-moz-read-write {
+            border: 1px solid green;
+            color: red;
+        }
+        .test1:read-write {
+            border: 1px solid green;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form> <!-- disabled='disabled' 相当于 disabled = true-->
+        启用：<input type="text" name="username" class='test1' id=""/>
+        只读<input type="text" name="password" readonly='read-only' class='test1' id="" value='只读的文本'/><br>
+        启用：<textarea name="" id="" cols="30" rows="10" class="test1"></textarea>
+        只读：<textarea name="" id="" cols="30" rows="10" class="test1" readonly='true'></textarea>
+    </form>
+</body>
+</html>

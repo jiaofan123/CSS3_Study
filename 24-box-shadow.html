@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style type="text/css">
+       div{
+           width:150px;
+           height: 150px;
+           border: 5px solid #abcdef;
+           background-color: #f80;
+           margin:50px 100px;
+       }
+        /*水平0 垂直10 盒子下方阴影*/
+       .box1{
+           box-shadow: 0 10px pink;
+       }
+        /*水平0 垂直-10 盒子上方阴影*/
+       .box2{
+           box-shadow: 0 -10px pink;
+       }
+        /*水平10 垂直0 盒子右方阴影*/
+       .box3{
+           box-shadow: 10px 0 pink;
+       }
+        /*水平-10 垂直0 盒子左方阴影*/
+       .box4{
+           box-shadow: -10px 0 pink;
+       }
+        /*水平10 垂直10 盒子右下方阴影*/
+       .box5{
+           box-shadow: 10px 10px rgba(0,0,0,.5);
+       }
+         /*水平-10 垂直-10 盒子左上方阴影*/
+       .box6{
+           box-shadow: -10px -10px rgba(0,0,0,.5);
+       }
+        /*水平-10 垂直-10 模糊半径5px 盒子左上方阴影*/
+       .box7{
+           box-shadow: -10px -10px 5px rgba(0,0,0,.5);
+       }
+         /*水平-10 垂直-10 模糊半径5px 阴影扩展5px 盒子左上方阴影*/
+       .box8{
+           box-shadow: -10px -10px 5px 5px rgba(0,0,0,.5);
+       }
+        /*盒子内部阴影 水平10 垂直10 模糊半径5px 盒子内部右上方阴影*/
+       .box9{
+           box-shadow: inset 10px 10px 5px rgba(0,0,0,.5);
+       }
+       /*多层阴影*/
+       .box10{
+           box-shadow: inset 0 -10px 5px red,10px 0 5px green,inset 0 10px 5px yellow, -10px 0 5px blue;
+       }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+</body>
+</html>

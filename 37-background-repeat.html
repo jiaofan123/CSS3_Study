@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-repeat</title>
+    <style type='text/css'>
+       div{
+           width: 450px;
+           height: 450px;
+           margin: 100px;
+           border: 1px solid red;
+           background-image: url('./assets/renwu.jpg');
+       }
+       .box1{
+           background-repeat: repeat;
+       }
+       .box2{
+           background-repeat: space;/*进行了平分 以相同的间距填充满整个容器*/
+       }
+       .box3{
+           background-repeat: round;/*扩大或者缩小图片来填充*/
+       }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

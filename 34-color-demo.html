@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color demo</title>
+    <style type="text/css">
+       .pro{
+           width: 500px;
+           height: 333px;
+           position: relative;
+       }
+       .pro:hover::before{
+           content:'小帅哥';
+           position: absolute;
+           top:0;
+           right:0;
+           left: 0;
+           bottom: 0;
+           background-color: hsla(0, 0%, 10%, .8);
+           color:#fff;
+           font-size: 20px;
+           line-height: 333px;
+           text-align: center;
+           font-weight: bold;
+           border: 2px solid red;
+       }
+    </style>
+</head>
+<body>
+    <div class="pro">
+        <img src="./assets/imagetest.jpg" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counters</title>
+    <style type="text/css">
+      ol{
+          counter-reset: chapter;
+      }
+      li::before{
+          counter-increment:chapter;
+          content: counters(chapter,'.');
+      }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Item
+            <ol>
+                <li>Item
+                <li>Item
+                    <ol>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ol>
+                </li>
+                <li>Item</li>
+                <li>Item</li>
+        </li>
+    </ol>
+    </li>
+    </ol>
+</body>
+</html>

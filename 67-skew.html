@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skew</title>
+    <style type='text/css'>
+      div{
+          width: 500px;
+          height: 440px;
+          background: url('./assets/xy.jpg') no-repeat center center;
+          margin: 30px auto;
+          border: 1px solid red;
+          background-size: 100% 100%;
+          position: relative;
+      }
+      div img{
+          width: 114px;
+          height: 167px;
+          position: absolute;
+          top: 50%; /*让图片居中*/
+          left: 50%; /*让图片居中*/
+          margin-top: -83.5px;  /*让图片居中*/
+          margin-left: -57px; /*让图片居中*/
+      }
+      div img:nth-child(1){
+          opacity: .5;
+          z-index: 1;
+      }
+      div img:nth-child(2){
+          transform: skew(30deg,15deg);
+          opacity: .6;
+          z-index: 2;
+      }
+      div:last-child img{
+          transform-origin: top; /*旋转基点变为图片的上侧中心位置*/
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div>
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+</body>
+</html>

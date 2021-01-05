@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style type='text/css'>
+       .test{
+          width: 400px;
+          height: 600px;
+          margin: 300px auto;
+          perspective: 500px;
+       }
+       .test img{
+           transform: rotateY(45deg);
+           transition: all 1s;
+       }
+       .test img:hover{
+           transform: rotate(0deg)
+       }
+    </style>
+</head>
+<body>
+    <div class="test">
+        <img src="./assets/zaoan.jpg" alt="">
+    </div>
+</body>
+</html>

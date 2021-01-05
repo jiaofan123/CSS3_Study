@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <style type="text/css">
+       [class*='test']{  /*所有元素节点的class名称中有test的，字体内容都变成红色*/
+           color:red
+       }
+       [class^='test1']{ /*所有元素节点的class名称中以test1开头的，字体变大到50px*/
+           font-size: 50px;
+       }
+       [class$='3']{  /*所有元素节点的class名称中以3结尾的，字体内容样式变为斜体且有蓝色边框*/
+           font-style:italic;
+           border: 1px solid blue;
+       }
+    </style>
+</head>
+<body>
+    <h1>通过attr*=val,attr^=val,attr$=val</h1>
+    <p class="test">test</p>
+    <p class="test1">test1</p>
+    <p class="test12">test12</p>
+    <h1 class="test33">test33</h1>
+    <div class="aatest443">test44</div>
+</body>
+</html>

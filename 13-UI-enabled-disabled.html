@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-enabled-disabled</title>
+    <style type="text/css">
+    .test1:enabled{
+        border:1px solid #0f0;
+    }
+    .test1:disabled{
+        border:1px solid #f00
+    }
+    </style>
+</head>
+<body>
+    <form> <!-- disabled='disabled' 相当于 disabled = true-->
+        启用：<input type="text" name="username" class='test1' id=""/>
+        禁用：<input type="text" name="password" disabled='disabled' class='test1' id=""/><br>
+        启用按钮： <input type="button" value="btn1" class="test1">
+        启用按钮:  <input type="submit" value="btn2" class="test1">
+        启用按钮： <input type="reset"  value="btn3" class="test1">
+        禁用按钮： <input type="button" value="btn1" class="test1" disabled='disabled'>
+        禁用按钮:  <input type="submit" value="btn2" class="test1" disabled='disabled'>
+        禁用按钮： <input type="reset"  value="btn3" class="test1" disabled='disabled'>
+    </form>
+</body>
+</html>

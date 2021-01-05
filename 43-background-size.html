@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size</title>
+    <style type='text/css'>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 5px solid red;
+            margin: 50px;
+            background: url('./assets/imagetest.jpg') no-repeat;
+        }
+        .box1 {
+            background-size: auto; /*默认值 保持背景图片的宽度和高度*/
+        }
+        .box2 {
+            background-size: 300px 100px; /*设置背景图片的宽度和高度 第一个是宽度 第二个是高度 如果只给出一个值 第二个是auto */
+        }
+        .box3 {
+            background-size: 50% 50%;/*与上面类似 但是是按照宽度的百分比计算*/
+        }
+        .box4 {
+            background-size: cover;/*等比缩放  背景图片可能超过容器 */    
+        }
+        .box5 {
+            background-size: contain;/*等比缩放 背景图片始终包含在容器中*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>

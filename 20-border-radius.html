@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boder-radius</title>
+    <style type="text/css">
+       .container{
+           width:960px;
+           margin:0px auto;
+       }
+       .container div{
+           width:100px;
+           height:100px;
+           border:3px solid #abcdef;
+           background-color: #f80;
+           margin:10px;
+       }
+       .box1{
+           border-radius: 60px 40px 20px 10px/30px 20px 10px 5px;
+           /*相当于如下
+             border-top-left-radius: 60px 30px;
+             border-top-right-radius: 40px 20px;
+             border-bottom-right-radius: 20px 10px;
+             border-bottom-left-radius: 10px 5px;*/
+       }
+       .container > .box2{
+        border:30px solid rebeccapurple;
+        border-radius: 30px; /*raduis 的值没有超过border的宽度 就不会有内边角的效果*/
+       }
+       .container>.box3{
+           width:400px;
+           height:100px;
+           border-style: solid;
+           border-color: #baba55;
+           border-width: 20px 30px 40px 50px;
+           border-radius: 100px;
+       }
+       .container>.box4{ /*操场的形状*/
+           width:500px;
+           height:100px;
+           border-style: solid;
+           border-width: 60px 30px 60px 30px;
+           border-color: pink blue pink blue;
+           border-radius: 150px;
+       }
+       .container> .table{
+           border:5px solid red;
+           border-collapse: separate; /*如果这里将单元边框合并，表格里面以及表格的圆角就不会有效果*/
+           border-spacing: 5px;
+           border-radius: 10px;
+       }
+       .table td{
+           border:3px solid green;
+           border-radius:5px;
+       }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+            </tr>
+            <tr>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+            </tr>
+            <tr>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+                <td>hello jiao</td>
+            </tr>
+        </table>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+</body>
+</html>

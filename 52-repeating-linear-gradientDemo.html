@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一封家书</title>
+    <style type='text/css'>
+       #container{
+           width: 960px;
+           margin: 0 auto;
+           border: 2px solid #abcdef;
+           height: 800px;
+           background-image: repeating-linear-gradient(to top,#f9f9f9,#f9f9f9 29px,#ccc 30px);
+           margin-top: 10px;
+           background-size: 100% 30px;
+           position:relative ;
+       }
+       #container h3{
+           font-size: 16px;
+           height: 30px;
+           line-height: 30px;
+           margin: 0;
+           text-indent: 40px;
+       }
+       #container::before{
+           content: "";
+           display: inline-block;
+           height: 100%;
+           width: 0;
+           border-left:4px double red;
+           position: absolute;
+           left: 30px;
+           top: 0;
+       }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h3>Dear Darling...</h3>
+    </div>
+</body>
+</html>

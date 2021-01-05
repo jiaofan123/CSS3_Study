@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-last-child</title>
+    <style type="text/css">
+      li:first-child{
+          color:chocolate;
+      }
+      li:last-child{
+          color:cyan
+      }
+      .box p:first-child{
+          color:darkmagenta
+      }
+      .box p:last-child{
+          color:darkred
+      }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>a1</li>
+        <li>a2</li>
+        <li>a3</li>
+        <li>a4</li>
+        <li>a5</li>
+    </ul>
+    <div class="box">
+        <span>hello</span>  <!-- 这时候先找到父样式box 然后看第一个子节点和最后一个子节点-->
+        <p>hello word1</p> 
+        <p>hello word2</p>
+        <p>hello word3</p>
+        <p>hello word4</p>
+        <h1>hello</h1>   <!--首位都不是P 所以不会出现样式的变化-->
+    </div>
+</body>
+</html>

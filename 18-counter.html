@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter 计数器</title>
+    <style type="text/css">
+       .test1{
+           counter-reset: section;
+       }
+       .test1 h3::before{
+           counter-increment:section;
+           content: "第"counter(section)"章——"
+       }
+       .test2{
+           counter-reset:c1 1 c2 10; /*初始化计时器 前面是计时器名称 后面是计时器的初始值 初始化多个的时候 空格隔开*/
+       }
+       .test2 h3::before{
+           counter-increment:c1 2 c2 5; /*可以设定多个计时器 空格隔开 前面是初始化计时器的名称 后面是递增的区间*/
+           content: "第"counter(c1)"章——共"counter(c2)"节";
+       }
+    </style>
+</head>
+<body>
+    <div class="test1">
+        <h3>CSS选择器</h3>
+        <h3>CSS圆角</h3>
+        <h3>CSS渐变</h3>
+        <h3>CSS动画</h3>
+    </div>
+    <div class="test2">
+        <h3>CSS选择器</h3>
+        <h3>CSS圆角</h3>
+        <h3>CSS渐变</h3>
+        <h3>CSS动画</h3>
+    </div>
+</body>
+</html>

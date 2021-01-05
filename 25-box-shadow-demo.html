@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow-demo</title>
+    <style type="text/css">
+        #container{
+            width:960px;
+            margin:0 auto;
+            font: 18px arial;
+        }
+        a{
+            display: block;
+            width:300px;
+            height:150px;
+            background-color: #abcdef;
+            margin:50px;
+            text-align: center;
+            line-height: 150px;
+            color:#333;
+            border-radius: 10px;
+            transition: all 1s;
+        }
+        .btn-left:hover{
+            box-shadow: inset 300px 0 rgba(0,0,0,.5); /*从左到右阴影*/
+        }
+        .btn-right:hover{
+            box-shadow: inset -300px 0 rgba(0,0,0,.5); /*从右到左阴影*/
+        }
+        .btn-inset:hover{
+            box-shadow: inset 0 0 0 10px rgba(0,0,0,.5); /*内部阴影*/
+        }
+        .inset-bgc:hover{/*内部 多层阴影*/
+            box-shadow: inset 0 0 0 10px greenyellow,inset 0 0 0 150px rgba(0,0,0,.5);
+        }
+        .left-right:hover{/*左边右边向中间汇合阴影*/
+            box-shadow: inset 300px 0 rgba(0,0,0,.2),inset -300px 0 rgba(0,0,0,.2);
+        }
+        .top-bottom:hover{/*顶部底部向中间汇合阴影*/
+            box-shadow: inset 0 150px rgba(0,0,0,.2),inset 0 -150px rgba(0,0,0,.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <a href="#" class="btn-left">btn-left</a>
+        <a href="#" class="btn-right">btn-right</a>
+        <a href="#" class="btn-inset">btn-inset</a>
+        <a href="#" class="inset-bgc">inset-bgc</a>
+        <a href="#" class="left-right">left-right</a>
+        <a href="#" class="top-bottom">top-bottom</a>
+    </div>
+</body>
+</html>

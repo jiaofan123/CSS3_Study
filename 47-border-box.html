@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-box</title>
+    <style type='text/css'>
+     .clearfix::after{
+         content: "";
+         clear: both;
+         display: block;
+     }
+     .wrap{
+         width: 800px;
+         margin: 50px auto;
+         border: 1px solid red;
+     }
+     .box1,.box2,.box3,.box4{
+         width: 200px;
+         height: 200px;
+         float: left;
+         box-sizing: border-box; /*不加这一条 hove的时候 4个盒子之和会超过800 换行 加了之后 border的值就算到width中了*/
+     }
+     .box1{
+         background-color: #f00;
+     }
+     .box2{
+         background-color: #00f;
+     }
+     .box3{
+         background-color: #f80;
+     }
+     .box4{
+         background-color: #0f0;
+     }
+     .box1:hover,.box2:hover,.box3:hover,.box4:hover{
+         border: 3px solid gray;
+     }
+
+
+    </style>
+</head>
+<body>
+    <div class='wrap clearfix'>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

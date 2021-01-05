@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qqNews</title>
+    <style type="text/css">
+     body{
+       font:12px/1.5 'Hiragino Sans GB','\5FAE\8F6F\96C5\9ED1',tahoma,arial,sans-serif;
+       color:#222;
+       counter-reset:count;
+     }
+     .news-list{
+         width:300px;
+         margin:100pX;
+         background-color: gainsboro;
+         /* border:1px solid red; */
+     }
+     .hot-title{
+        height:40px;
+     }
+     .hot-title h2{
+       border-left:4px solid #ec5353;
+       height:20px;
+       line-height:20px;
+       margin-top:10px;
+       text-indent:15px;
+     }
+     .news-list .hot-news li{
+         margin:10px 0;
+     }
+     .hot-news ul{ 
+         list-style-type: none;
+         padding:0;
+     }
+     .hot-news li a{
+         display:block;
+         height:30px;
+         font-size:14px;
+         color:#404040;
+         /* border:1px solid pink; */
+         white-space: nowrap;
+         line-height:30px;
+         overflow:hidden;
+         text-overflow: ellipsis;
+     }
+     .hot-news li :before{
+         counter-increment:count;
+         content: counter(count);
+         float: left;
+         width:15px;
+         height:15px;
+         background-color:#ec5353;
+         line-height:15px;
+         text-align: center;
+         margin-top: 7px;
+         margin-right: 10px;
+     }
+
+    </style>
+</head>
+<body>
+    <div class="news-list">
+        <div class="hot-title">
+             <h2>热搜排行</h2>
+        </div>
+        <div class="hot-news">
+            <ul >
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+                 <li><a href="#">热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻热搜新闻</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

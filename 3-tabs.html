@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style type="text/css">
+        .tab-area{
+            width:300px;
+            border:1px solid #ccc;
+            margin:100px;
+        }
+        /* .clearfix{  IE6 7 需要添加
+            zoom: 1;
+        } */
+        .clearfix::after{ /*清除浮动*/
+            content:"";
+            /* height:0; */
+            display: block;
+            clear:both;
+        }
+        .tabs{
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+        .tabs li{
+            float: left;
+        }
+        .tabs li a{
+            padding: 10px 20px;
+            border:3px solid #abcdef;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+        }
+        .box-wrap{
+            height:200px;
+            position: relative;/*与子元素absolute相互辉映*/
+        }
+        .box-wrap div{
+            border:1px solid pink;
+            height: 200px;
+            width:100%;
+            position: absolute;/*相对于box-warp定位，脱离文档流*/
+            top:0;
+            left:0;
+            background-color:#fff; /*设定背景后只能看到最后一个box的页面值*/
+        }
+        #box1:target,#box2:target,#box3:target{
+            z-index:1;
+        }
+        .menulist{
+            padding:0;
+            margin:0;
+            list-style-type: none;
+        }
+        .menulist li{
+            height: 50px;
+            line-height: 50px;
+            width:100%;
+            padding:2px 0;
+        }
+        .menulist li img{
+            width:30%;
+            height:100%;
+            vertical-align: middle;
+        }
+        .menulist li span{
+            width:70%;
+            overflow:hidden; 
+        }
+        /* .clear{clear:both;} */
+    </style>
+</head>
+<body>
+    <div class="tab-area">
+        <ul class="tabs clearfix">
+            <li><a href="#box1">tab1</a></li>
+            <li><a href="#box2">tab2</a></li>
+            <li><a href="#box3">tab3</a></li>
+        </ul>
+        <!-- <div class="clear"></div> 增加页面的标签，造成结构的混乱 -->
+        <div class="box-wrap">
+            <div id="box1">
+                <ul class="menulist">
+                    <li>
+                        <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg" alt="简单生活，何尝不是一种华丽冒险">
+                        <span>第一个目录，简单生活</span>
+                    </li>
+                    <li>
+                        <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1570190499,3408240602&fm=26&gp=0.jpg" alt="向阳而生，逆风翻盘">
+                        <span>第二个目录，向阳而生，逆风翻盘</span>
+                    </li>
+                    <li>
+                        <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1570190499,3408240602&fm=26&gp=0.jpg" alt="向阳而生">
+                        <span>第二个目录，向阳而生</span>
+                    </li>
+                </ul>
+            </div>
+            <div id="box2">hello box2</div>
+            <div id="box3">hello box3</div>
+        </div>
+    </div>
+</body>
+</html>

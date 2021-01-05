@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D矩阵例子</title>
+    <style type='text/css'>
+       div{
+           width: 500px;
+           height: 300px;
+           margin: 30px auto;
+           background: url('./assets/xy.jpg') no-repeat center center;
+           background-size: 100% 100%;
+           position: relative;
+       }
+       div img{
+          width: 58px;
+          height: 84px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -42px;
+          margin-left: -29px;
+       }
+       div img:first-child{
+           opacity: .6;
+           z-index: 1;
+       }
+       .test1 img:last-child{
+           transform: translate(30px,30px);
+       }
+       .test2 img:last-child{
+           transform: matrix(1,0,0,1,30,30);/*使用矩阵 两个30代表水平 垂直移动的距离 效果同上*/
+       }
+       .test3 img:last-child{
+           transform: scale(2,2);
+       }
+       .test4 img:last-child{
+           transform: matrix(2,0,0,2,0,0)/*使用矩阵 效果同上*/
+       }
+       .test5 img:last-child{
+           transform: rotate(90deg)
+       }
+       .test6 img:last-child{
+           transform: matrix(0,1,-1,0,0,0)/*使用矩阵 效果同上*/
+       }
+      /*skew也一样 根据公式可以得出*/
+    </style>
+</head>
+<body>
+    <div class="test1">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div class="test2">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div class="test3">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div class="test4">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div class="test5">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div class="test6">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+</body>
+</html>

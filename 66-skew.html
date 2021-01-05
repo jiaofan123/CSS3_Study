@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skew</title>
+    <style type='text/css'>
+    div{
+        width: 200px;
+        height: 100px;
+        border: 1px solid #abcdef;
+        background-color: #58a;
+        margin: 200px;
+    }
+    .box1{
+        transform: skew(30deg,15deg) /*第二个参数为空的时候 默认为0  右下方向*/
+    }
+    .box2{
+        transform: skew(-30deg,-15deg) /*左上方向*/
+    }
+    .box3{
+        transform: skewX(30deg); /*也可以这样只设置X 或者Y*/
+    }
+    .box4{
+        transform: skewX(30deg) skewY(30deg);
+    }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</body>
+</html>

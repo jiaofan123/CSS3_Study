@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重复径向渐变</title>
+    <style type='text/css'>
+      div{
+          width: 300px;
+          height: 300px;
+          border: 5px solid gray;
+          margin: 30px auto;
+          border-radius: 100%;
+      }
+      .box1{
+          background-image: radial-gradient(red,green,blue);/*三种颜色平均分配  其他都是默认值*/
+      }
+      .box2{
+          background-image: radial-gradient(red 20%,green 40%,blue 100%);
+      }
+      .box3{
+          background-image: repeating-radial-gradient(red,green,blue);
+          /*如果不写各个颜色所占比例 则平均分布*/
+      }
+      .box4{
+          background-image: repeating-radial-gradient(red,green 20px,blue 40px);
+      }
+      .box5{
+          border-radius: 0%;
+          background-image: repeating-radial-gradient(circle at 0 0,#eee,#ccc 50px);
+      }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+    <div class="box7">box7</div>
+    <div class="box8">box8</div>
+    <div class="box9">box9</div>
+    <div class="box10">box10</div>
+</body>
+</html>

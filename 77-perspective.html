@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective属性和perspective函数的区别</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style type='text/css'>
+      div{
+          width: 200px;
+          height: 200px;
+      }
+      .demo1,.demo2,.demo3,.demo4{
+          border: 1px solid #ccc;
+          margin: 100px;
+      }
+      .demo2{
+          perspective: 500px;
+      }
+      .red{
+          background-color: #f00;
+          transform:perspective(500px) rotateY(45deg);
+      }
+      .blue{
+          background-color: #00f;
+          transform: rotateY(45deg);
+      }
+      .green{
+          background-color: #0f0;
+          width: 50px;
+          height: 50px;
+          border: 3px solid black;
+          float: left;
+          margin: 5px;
+          transform: perspective(500px) rotateY(45deg);/*每个子元素为视点*/
+      }
+      .demo4{
+          perspective: 500px;
+          transform: rotateY(45deg);/*整个父元素为视点*/
+      }
+      .pink{
+          background-color: pink;
+          width: 50px;
+          height: 50px;
+          border: 3px solid black;
+          float: left;
+          margin: 5px;
+      }
+    </style>
+</head>
+<body>
+    <div class="demo1">
+        <div class="red"></div>
+    </div>
+    <div class="demo2">
+        <div class="blue"></div>
+    </div>
+   <div class="demo3 clearfix">
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+       <div class="green"></div>
+   </div>
+    <div class="demo4 clearfix">
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+        <div class="pink"></div>
+    </div>
+</body>
+</html>

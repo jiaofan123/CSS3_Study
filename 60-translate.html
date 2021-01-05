@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate</title>
+    <style type='text/css'>
+      div{
+          width: 800px;
+          height: 500px;
+          background: url('./assets/xy.jpg') no-repeat center center;
+          margin: 30px auto;
+          border: 1px solid red;
+          background-size: 100% 100%;
+          position: relative;
+      }
+      div img{
+          width: 58px;
+          height: 84px;
+          position: absolute;
+          top: 50%; /*让图片居中*/
+          left: 50%; /*让图片居中*/
+          margin-top: -42px;  /*让图片居中*/
+          margin-left: -29px; /*让图片居中*/
+      }
+      div img:nth-child(1){
+          z-index: 1;
+          opacity: .5;
+      }
+      div img:nth-child(2){
+          transform: translate(200px,100px); /*往右200px 往下100px*/
+      }
+      div img:nth-child(3){
+          transform: translate(200px,-100px);
+      }
+      div img:nth-child(4){
+          transform: translate(-200px,-100px);
+      }
+      div img:nth-child(5){
+          transform: translate(-200px,100px);
+      }
+      div:last-child img{
+          transform-origin: bottom; /*与山面效果相同 因为移动的时候就是以这个图片本身为基点*/
+      }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+    <div>
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+        <img src="./assets/A.jpeg" alt="">
+    </div>
+</body>
+</html>

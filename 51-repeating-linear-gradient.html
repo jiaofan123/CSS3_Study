@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeating-linear-gradient</title>
+    <style type="text/css">
+    div{
+        width: 400px;
+        height: 300px;
+        border: 1px solid red;
+        margin: 100px;
+    }
+      .box1{
+          background-image: repeating-linear-gradient(red,green,blue);
+      }
+      .box2{
+          background-image: repeating-linear-gradient(red,green 20px,blue 40px);
+      }
+      .box3{
+          background-image: repeating-linear-gradient(to right,red,green 10px,blue 20px);
+      }
+      .box4{
+          background-image: repeating-linear-gradient(135deg,#abcdef,#abcdef .25em,#58a,#58a .75em);
+      }
+      .box5{ /*进度条的样式*/
+          width: 200px;
+          height: 20px;
+          background-image: repeating-linear-gradient(135deg,#abcdef,#abcdef .25em,#58a,#58a .75em);
+          background-repeat: no-repeat;
+          background-size: 50% 100%;
+      }
+      .box6{
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 20px;
+          background-image: repeating-linear-gradient(135deg,#abcdef,#abcdef .25em,#58a,#58a .75em);
+      }
+      .box6:hover{
+          background-image: repeating-linear-gradient(225deg,#abcdef,#abcdef .25em,#58a,#58a .75em);
+      }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6">首页</div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+</body>
+</html>

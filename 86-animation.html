@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style type='text/css'>
+     div{
+         width: 200px;
+         height: 200px;
+         border: 3px solid gold;
+         margin: 20px auto;
+     }
+     @keyframes ani1{
+         from{
+             background-color: #abcdef; /*可以使用关键字from/to从一种状态过渡到另一种状态*/
+         }
+         to{
+             background-color: #f80;
+         }
+     }
+     .box1{
+         animation: ani1 2s;
+     }
+     @keyframes ani2{
+         0%{
+             background-color: #f00;/*也可以使用百分比设置复杂的动画 从0%到100% 设置某个时间段内的样式*/    
+         }
+         100%{
+             background-color: #f0f;
+         }
+     }
+     .box2{
+         animation: ani2 3s;
+     }
+     @keyframes ani3{
+         from{
+             background-color: #abcdef;/*也可以是0%*/
+         }
+         20%{
+             background-color: #009688;
+         }
+         40%{
+             background-color: #FFEB3B;
+         }
+         60%{
+             background-color: #FF9800;
+         }
+         80%{
+             background-color: #FF4081;
+         }
+         to{
+             background-color: #9C27B0; /*也可以是100%*/
+         }
+     }
+     .box3{
+         animation-name: ani3;
+         animation-duration: 3s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: 2;
+     }
+     @keyframes ani4{
+         0%{
+             width: 300px;
+             height: 300px;
+             background-color: #0f0;
+         }
+         50%{
+             width: 400px;
+             height: 400px;
+             background-color: #f00;
+         }
+         100%{
+             width: 500px;
+             height: 500px;
+             background-color: #00f;
+         }
+     }
+     .box4{
+         animation-name: ani4; /*调用动画名称*/
+         animation-duration: 3s; /*动画完成时间*/
+         animation-timing-function: linear; /*动画转换函数*/
+         animation-iteration-count: 2; /*动画循环次数*/
+         animation-direction: alternate; /*动画播放方向 奇数次正向播放 偶数次反向播放*/
+     }
+     @keyframes ani5{
+         0%{
+             transform: translate(0,0);
+         }
+         30%{
+             transform: translate(60px,0);
+         }
+         60%{
+             transform: translate(-60px,0);
+         }
+         100%{
+             transform: translate(0,0);
+         }
+     }
+     .box5{
+         animation-name: ani5;
+         animation-duration: 2s;
+         animation-timing-function: linear;
+         animation-iteration-count: infinite;
+         animation-direction: alternate;
+         animation-delay: 2s; /*延迟动画的时间*/
+     }
+     .box5:hover{
+         animation-play-state: paused; /*设置对象动画的状态*/
+     }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+    <div class="box7">box7</div>
+    <div class="box8">box8</div>
+    <div class="box9">box9</div>
+    <div class="box10">box10</div>
+</body>
+</html>

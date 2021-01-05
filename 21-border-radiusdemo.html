@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radiusdemo</title>
+    <style type="text/css">
+      .container{
+          width:960px;
+          margin:100px auto;
+      }
+      .box1{
+          width:200px;
+          height:200px;
+          border: 5px solid red;
+          background-color: #abcdef;
+          border-radius:50%; /*等价于border-radius: 100px;  50%是相对于其父元素的宽度来设定的，这样设定更加方便后面的维护，因为即使父元素的宽度变了，也不用去调整*/
+      }
+      .box2{
+          width:100px; /*半圆*/
+          height:50px;
+          background-color: #f80;
+          border-radius:50px 50px 0 0;
+      }
+      .box3{
+          width:200px;
+          height:100px;
+          background-color: aqua;
+          border-radius:0 0 100px 100px;
+      }
+      .box4{
+          width:100px;
+          height:200px;
+          background-color: brown;
+          border-radius:0 100px 100px 0;
+      }
+      .box5{
+          width:100px;
+          height:200px;
+          background-color:lawngreen;
+          border-radius: 100px 0 0 100px;
+      }
+      .box6{
+          width:200px;   /*四分之一圆 */
+          height:200px;
+          background-color: lightsalmon;
+          border-radius: 200px 0 0 0;
+      }
+      .box7{
+          width:100px;
+          height:100px;
+          background-color: lightseagreen;
+          border-radius: 0 0 100px 0;
+          margin:10px;
+      }
+      .box8{  
+          width:200px;
+          height:150px;
+          background-color: mediumseagreen;
+          border-radius: 100px / 75px;  /*椭圆  水平一半垂直一半*/
+      }
+      .box9{
+          width:150px;
+          height:200px;
+          background-color: palegreen;
+          border-radius: 75px / 100px;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+</body>
+</html>

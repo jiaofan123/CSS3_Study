@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radial-gradient</title>
+    <style type='text/css'>
+     div{
+         width: 300px;
+         height: 200px;
+         border: 5px solid green;
+         margin: 30px auto;
+     }
+     .box1{
+         background-image: radial-gradient(ellipse,yellow,red);/*橢圓 默認 默认坐标中心*/
+     }
+     .box2{
+         background-image: radial-gradient(circle,yellow,red);
+     }
+     .box3{
+         background-image: radial-gradient(30px 30px,yellow,red);
+         /*可以忽略第一个参数 默认为椭圆 渐变水平半径30px 垂直半径30px 默认坐标中心*/
+     }
+     .box4{
+         background-image: radial-gradient(50px 100px at 150px 100px,yellow,red);/*圆心设置水平150px 垂直100px*/
+     }
+     .box5{
+         background-image: radial-gradient(50px 100px at 50% 50%,yellow,red);/*可以使用百分比 效果同上*/
+     }
+     .box6{
+         background-image: radial-gradient(50% 50% at 50% 50%,yellow,red);/*渐变半径也可以使用百分比 */
+     }
+     .box7{
+         background-image: radial-gradient(150px 100px at 50% 50%,yellow,red);/* 效果同上*/
+     }
+     .box8{
+         background-image: radial-gradient(150px 100px at center,yellow,red); /*圆心位置也可以使用关键字 */
+     }
+     .box9{
+         background-image: radial-gradient(150px 100px at left,yellow,red); 
+         /*圆心位置使用关键字 当只有一个值时 代表水平left 第二个值为center默认居中 */
+     }
+     .box10{
+         background-image: radial-gradient(150px 100px at left top,yellow,red); 
+         /*圆心位置使用关键字 当只有一个值时 代表水平left top 第二个值为center默认居中 */
+     }
+     .box11{
+         background-image: radial-gradient(circle closest-side at center ,#ff5912,#b7df2d);
+     }
+     .box12{
+         background-image: radial-gradient(circle farthest-side at center ,#ff5912,#b7df2d);/*默认是最远的角 farthest-corner*/
+     }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+    <div class="box6">box6</div>
+    <div class="box7">box7</div>
+    <div class="box8">box8</div>
+    <div class="box9">box9</div>
+    <div class="box10">box10</div>
+    <div class="box11">box11</div>
+    <div class="box12">box12</div>
+</body>
+</html>

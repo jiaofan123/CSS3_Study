@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steps</title>
+    <style type='text/css'>
+        body{
+            font: 12px/50px arial;
+        }
+        .wrap div{
+            width: 25%;
+            height: 50px;
+            background-color: linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,.4) 70%);
+            transition-property: width;
+            transition-duration: 3s;
+        }
+        .wrap:hover div{
+            width: 100%;
+        }
+        .timing1{
+            background-color: #f00;
+            transition-timing-function: linear;
+        }
+        .timing2{
+            background-color: #0f0;
+            transition-timing-function: ease;
+        }
+        .timing3{
+            background-color: #00f;
+            transition-timing-function: ease-in;
+        }
+        .timing4{
+            background-color: #f80;
+            transition-timing-function: ease-out;
+        }
+        .timing5{
+            background-color: #58a;
+            transition-timing-function: ease-in-out;
+        }
+        .timing6{
+            background-color: rgb(205, 221, 114);
+            transition-timing-function: steps(7);
+        }
+        .timing7{
+            background-color: #a33;
+            transition-timing-function: step(7,start);
+        }
+        .timing8{
+            background-color: rgb(24, 163, 121);
+            transition-timing-function: step-start;
+        }
+        .timing9{
+            background-color: rgb(137, 8, 141);
+            transition-timing-function: step-end;
+        }
+        .timing10{
+            background-color: rgb(10, 81, 114);
+            transition-timing-function: cubic-bezier(1,0,0,1);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+       <div class="timing1">
+           <p>linear</p>
+       </div>
+       <div class="timing2">
+           <p>ease</p>
+       </div>
+       <div class="timing3">
+           <p>ease-in</p>
+       </div>
+       <div class="timing4">
+           <p>ease-out</p>
+       </div>
+       <div class="timing5">
+           <p>ease-in-out</p>
+       </div>
+       <div class="timing6">
+           <p>steps(7)</p>
+       </div>
+       <div class="timing7">
+           <p>steps(7,start)</p>
+       </div>
+       <div class="timing8">
+           <p>step-start=steps(1,start)</p>
+       </div>
+       <div class="timing9">
+           <p>step-end=steps(1.end)</p>
+       </div>
+       <div class="timing10">
+           <p>cubic-bezier(1,0,0,1)</p>
+       </div>
+    </div>
+</body>
+</html>

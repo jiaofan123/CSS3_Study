@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-image</title>
+    <style type="text/css">
+       div{
+           width:400px;
+           height:300px;
+           margin:50px;
+           border-style: solid;
+           border-width: 27px;
+       }
+       /*水平垂直重复 repeat*/
+       .box1{
+           border-image: url(assets/border.png) 27 repeat;
+       }
+       .box2{
+           border-image:url(assets/border2.jpeg) 27 fill repeat; /*fill填充中间部分*/
+       }
+       /*水平垂直stretch*/
+       .box3{
+           border-image: url(assets/border.png) 27 stretch ;
+       }
+       /*水平stretch 垂直repeat*/
+       .box4{
+           border-image: url(assets/border.png) 27 stretch repeat;
+       }
+       /*roubd*/
+       .box5{
+           border-image: url(assets/border.png) 27 stretch round; /*垂直方向是进行缩放（round）后的一个平铺效果*/
+       }
+       /*水平repeat 垂直stretch*/
+       .box6{
+           border-image: url(assets/border.png) 27 repeat stretch; 
+       }
+        /*水平round 垂直stretch*/
+       .box7{
+           border-image: url(assets/border.png) 27 round stretch; 
+       }
+        /*水平round 垂直round*/
+       .box8{
+           border-width: 27px 54px 18px 5px;
+           border-image: url(assets/border.png) 27 round;
+       }
+       /*单独设置*/
+       .box9{
+           border-image-source: url(assets/border.png);
+           border-image-slice: 27; /*不可以加单位*/
+           border-image-width: 27px;
+           border-image-outset: 20px;
+           border-image-repeat: round;
+       }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+</body>
+</html>

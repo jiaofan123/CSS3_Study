@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-gradient</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style type='text/css'>
+     .container{
+          width: 960px;
+          margin: 50px auto;
+          border: 1px solid #f00;
+      }
+    .container div{
+          font: 20px arial; /*放到 line-height 后面 否则line height会被覆盖 font的参数顺序*/
+          float: left;
+          width: 400px;
+          height: 200px;
+          border: 2px solid gray;
+          text-align: center;
+          line-height: 200px;
+          margin: 20px;
+      }
+      .box1{
+          background-image: linear-gradient(to top,pink,#abcdef)    
+      }
+      .box2{
+          background-image: linear-gradient(to right,pink,#abcdef)
+      }
+      .box3{
+          background-image: linear-gradient(to bottom,pink,#abcdef)
+      }
+      .box4{
+          background-image: linear-gradient(to left,pink,#abcdef)
+      }
+      .box5{
+          background-image: linear-gradient(to top left ,pink,#abcdef)
+      }
+      .box6{
+          background-image: linear-gradient(to top right,pink,#abcdef)
+      }
+      .box7{
+          background-image: linear-gradient(to bottom left,pink,#abcdef)
+      }
+      .box8{
+          background-image: linear-gradient(to bottom right,pink,#abcdef)
+      }
+    </style>
+</head>
+<body>
+    <div class='container clearfix'>
+      <div class="box1">to top</div>
+      <div class="box2">to right</div>
+      <div class="box3">to bottom</div>
+      <div class="box4">to left</div>
+      <div class="box5">to top left</div>
+      <div class="box6">to top right</div>
+      <div class="box7">to bottom left</div>
+      <div class="box8">to bottom right</div>
+    </div>
+</body>
+</html>

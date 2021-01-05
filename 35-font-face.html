@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-face</title>
+    <style type='text/css'>
+        @font-face {
+            font-family: 'jiaofont';
+            src: url('fonts/kaushanscript-regular-webfont.eot') format('eot'),
+                /*当浏览器找不到eot会继续往下找*/
+                url('fonts/kaushanscript-regular-webfont.svg') format('svg'),
+                url('fonts/kaushanscript-regular-webfont.ttf') format('ttf'),
+                url('fonts/kaushanscript-regular-webfont.woff') format('woff'),
+                url('fonts/kaushanscript-regular-webfont.woff2') format('woff2')
+        }
+    
+        body {
+            font-family: jiaofont;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>jiao jiao</div>
+    <div>jiao jiao</div>
+</body>
+</html>

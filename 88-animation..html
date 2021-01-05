@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style type='text/css'>
+        .container{
+            width: 960px;
+            margin: 50px auto;
+        }
+        .test{
+            font-size: 3em;
+            font-weight: bold;
+            color: #abcdef;
+            animation: testFail 4s infinite;
+            transform-origin: left center;
+        }
+        @keyframes testFail {
+            form,15%{
+              transform: rotate(0) translateX(0);
+              opacity: 1;
+              animation-timing-function: cubic-bezier(.07,2.02,.67,.57);
+            }
+            50%,60%{
+                transform: rotate(90deg) translateX(0);
+                opacity: 1;
+                animation-timing-function: cubic-bezier(.13,.84,.82,1);
+            }
+            100%{
+                transform: rotate(90deg) translateX(200px);
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="test">Jiao Jiao</p>
+    </div>
+</body>
+</html>

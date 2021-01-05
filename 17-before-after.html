@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before after</title>
+    <style type="text/css">
+        .test1::after{
+           content:attr(class)"————百度官网地址： "attr(data-url)"————qq: "attr(data-qq)
+        }
+        .test2::before{
+            content: attr(style);
+        }
+    </style>
+</head>
+<body>
+    <p class='test1' data-url='http://www.baidu.com' data-qq='1108927272'>Hello Word</p>
+    <p class='test2' style="color:red;border:1px solid blueviolet">This is a test</p>
+</body>
+</html>

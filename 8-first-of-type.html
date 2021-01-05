@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-of-type</title>
+</head>
+<style type="text/css">
+   .test1 p:first-of-type{
+       color:gold
+   }
+   .test1 p:nth-of-type(1){ /*相当于first-of-type*/
+       font-size: 28px;
+   }
+   .test1 p:last-of-type{
+       color:hotpink
+   }
+   .test1 p:nth-last-of-type(1){  /*相当于last-of-type*/
+       font-style: italic;
+   }
+</style>
+<body>
+    <div class="test1">
+        <h3>03</h3>
+        <h3>04</h3>
+        <p>001</p>
+        <p>002</p>
+        <p>003</p>
+        <h3>05</h3>
+        <h2>11</h2>
+    </div>
+</body>
+</html>

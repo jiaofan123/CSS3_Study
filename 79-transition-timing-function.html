@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>transition-timing-function</title>
+    <style type='text/css'>
+        .containor{
+            width: 960px;
+            height: 320px;
+            border: 2px solid #ccc;
+            margin: 100px auto;
+            background-color: #f6f6f6;
+            position: relative;
+        }
+        .containor:hover .bolloon{
+            bottom: 160px;
+            transition-duration: 3s;
+        }
+        .containor .bolloon{
+            width: 100px;
+            height: 160px;
+            background: url('./assets/pinkqiqiu.jpg') no-repeat ;
+            background-size:100% 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        .containor .bolloon.default{
+            background: url('./assets/blueqiqiu.jpg') no-repeat;
+            left:40px;
+            background-size:100% 100%;
+        }
+        .containor .bolloon.linear{
+            left:150px;
+            transition-timing-function: linear;
+        }
+        .containor .bolloon.ease-in{
+            left:260px;
+            transition-timing-function: ease-in; /*慢=》快*/
+        }
+        .containor .bolloon.ease-out{
+            left:370px;
+            transition-timing-function: ease-out;
+        }
+        .containor .bolloon.ease-in-out{
+            left:480px;
+            transition-timing-function: ease-in-out;
+        }
+        .containor .bolloon.cubic-bezier{
+            left:590px;
+            transition-timing-function: cubic-bezier(.25,1.84,.67,-1.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class="bolloon default">default</div>
+        <div class="bolloon linear">linear</div>
+        <div class="bolloon ease-in">ease-in</div>
+        <div class="bolloon ease-out">ease-out</div>
+        <div class="bolloon ease-in-out">ease-in-out</div>
+        <div class="bolloon cubic-bezier">cubic-bezier</div>
+    </div>
+</body>
+</html>

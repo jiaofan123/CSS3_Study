@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>线性渐变-linear-gradient</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style type='text/css'>
+      .container{
+          width: 960px;
+          margin: 50px auto;
+          border: 1px solid #f00;
+      }
+      .container div{
+          font: 20px arial; /*放到 line-height 后面 否则line height会被覆盖 font的参数顺序*/
+          float: left;
+          width: 400px;
+          height: 200px;
+          border: 2px solid gray;
+          text-align: center;
+          line-height: 200px;
+          margin: 20px;
+      }
+      .box1{
+          background-image: linear-gradient(to top,#abcdef,#f80);
+      }
+      .box2{
+          background-image: linear-gradient(0deg,#abcdef,#f80);
+      }
+      .box3{
+          background-image: linear-gradient(360deg,#abcdef,#f80);
+      }
+      .box4{
+          background-image: linear-gradient(-360deg,#abcdef,#f80);
+      }
+      .box5{
+          background-image: linear-gradient(to bottom,#abcdef,#f80);
+      }
+      .box6{
+          background-image: linear-gradient(180deg,#abcdef,#f80);
+      }
+      .box7{
+          background-image: linear-gradient(-180deg,#abcdef,#f80);
+      }
+      .box8{
+          background-image: linear-gradient(to left,#abcdef,#f80);
+      }
+      .box9{
+          background-image: linear-gradient(-90deg,#abcdef,#f80);
+      }
+      .box10{
+          background-image: linear-gradient(270deg,#abcdef,#f80);
+      }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box1">to top</div>
+        <div class="box2">0deg</div>
+        <div class="box3">360deg</div>
+        <div class="box4">-360deg</div>
+        <div class="box5">to bottom</div>
+        <div class="box6">180deg</div>
+        <div class="box7">-180deg</div>
+        <div class="box8">to left</div>
+        <div class="box9">-90deg</div>
+        <div class="box10">270deg</div>
+    </div>
+</body>
+</html>

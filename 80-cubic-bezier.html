@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>cubic-bezier</title>
+    <style type='text/css'>
+        .containor{
+            width: 960px;
+            height: 320px;
+            border: 2px solid #ccc;
+            margin: 100px auto;
+            background-color: #f6f6f6;
+            position: relative;
+        }
+        .containor:hover .bolloon{
+            bottom: 160px;
+            transition-duration: 3s;
+        }
+        .containor .bolloon{
+            width: 100px;
+            height: 160px;
+            background: url('./assets/pinkqiqiu.jpg') no-repeat ;
+            background-size:100% 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        .containor .bolloon.default{
+            background: url('./assets/blueqiqiu.jpg') no-repeat;
+            left:40px;
+            background-size:100% 100%;
+        }
+        .containor .bolloon.bezier1{
+            left:150px;
+            transition-timing-function:cubic-bezier(0,0,1,1);
+        }
+        .containor .bolloon.bezier2{
+            left:260px;
+            transition-timing-function: cubic-bezier(0,1,1,1); 
+        }
+        .containor .bolloon.bezier3{
+            left:370px;
+            transition-timing-function: cubic-bezier(1,1,1,1);
+        }
+        .containor .bolloon.bezier4{
+            left:480px;
+            transition-timing-function: cubic-bezier(0,0,0,1);
+        }
+        .containor .bolloon.bezier5{
+            left:590px;
+            transition-timing-function: cubic-bezier(0,0,1,0);
+        }
+        .containor .bolloon.bezier6{
+            left:700px;
+            transition-timing-function: cubic-bezier(.73,-0.3,.73,-0.3);
+        }
+        .containor .bolloon.bezier7{
+            left:810px;
+            transition-timing-function: cubic-bezier(.62,-0.61,.18,1.33);
+        }
+    </style>
+</head>
+<body>
+    <div class="containor">
+        <div class="bolloon default">default</div>
+        <div class="bolloon bezier1">bezier1</div>
+        <div class="bolloon bezier2">bezier2</div>
+        <div class="bolloon bezier3">bezier3</div>
+        <div class="bolloon bezier4">bezier4</div>
+        <div class="bolloon bezier5">bezier5</div>
+        <div class="bolloon bezier6">bezier6</div>
+        <div class="bolloon bezier7">bezier7</div>
+    </div>
+</body>
+</html>

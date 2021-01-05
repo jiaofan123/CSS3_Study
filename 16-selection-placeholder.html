@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection placeholder</title>
+    <style type="text/css">
+        h1::selection {
+            color: indianred;
+            background-color: khaki;
+        }
+        ::-webkit-input-placeholder {
+            color: lawngreen
+        }
+        ::-moz-placeholder {
+            color: lawngreen
+        }
+        :-ms-input-placeholder {
+            color: lawngreen
+        }
+        ::-ms-input-placeholder {
+            color: lawngreen
+        }
+        ::placeholder {
+            color: lawngreen
+        }
+    </style>
+</head>
+<body>
+    <h1>::section 设置文本选中时的样式</h1>
+    <input type="text" name="username" id="" placeholder='请输入合法用户名。。。'><br>
+    <input type="text" name="username" id="" value='请输入用户名'><br>
+    <textarea placeholder="请输入个人简介。。。"></textarea><br>
+    <textarea name="" id="" cols="30" rows="10"></textarea><br>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style type='text/css'>
+     div{
+         width: 200px;
+         height: 200px;
+         border: 3px solid gold;
+         margin: 20px auto;
+     }
+     @keyframes ani1 {
+         from,10%{
+             background-color: #f00;
+         }
+         30%,50%{ /*缩写形式*/
+             background-color: gold;
+         }
+         80%,to{
+             background-color: #0f0;
+         }
+     }
+     .box1{
+         animation: ani1 3s linear 2s 3;/*缩写形式*/
+     }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+</body>
+</html>

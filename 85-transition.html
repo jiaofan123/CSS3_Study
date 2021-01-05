@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style type='text/css'>
+     div{
+         width: 100px;
+         height: 100px;
+         background-color: #abcdef;
+         margin: 100px auto;
+         border-radius: .5em;
+         text-align: center;
+         line-height: 100px;
+     }
+     .box1{
+         transition-property: background,width,height;
+         transition-duration: 1s,2s,2s;/*可以分别给属性设置过度时间*/
+         transition-timing-function: linear,ease-in,ease-in-out;/*同上可以分别给属性设置转换函数*/
+         transition-delay: 1s,0,3s;/*同上可以分别给属性设置延迟时间*/
+     }
+     .box1:hover{
+         background-color: pink;
+         width: 300px;
+         height: 300px;
+     }
+     .box2{
+         transition: background 1s linear 1s;  /*和box1等价 只是缩写*/
+         transition: width 2s ease-in 0s;
+         transition: height 2s ease-in-out 3s;
+     }
+     .box2:hover{
+         background-color: rgb(27, 216, 83);
+         width: 400px;
+         height: 400px;
+     }
+     .box3{
+         transition: all 1s ease-in-out;
+     }
+     .box3:hover{
+         width: 50px;
+         height: 50px;
+         background-color: rgb(202, 38, 161);
+     }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

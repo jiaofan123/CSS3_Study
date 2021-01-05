@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D缩放</title>
+    <style type='text/css'>
+      .demo{
+          width: 300px;
+          height: 300px;
+          float: left;
+          background: url('./assets/xy.jpg') no-repeat center center;
+          background-size: 100% 100%;
+          margin: 20px;
+          position: relative;
+          perspective: 1000px;
+      }
+      .content{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform-style: preserve-3d;
+      }
+      .content img{
+          width:152px;
+          height:219px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          margin-left: -76px;
+          margin-top: -109.5px;
+          border: 1px solid #ccc;
+      }
+      .content img:nth-child(1){
+          opacity: .5;
+          z-index: 1;
+      }
+      .test1 img:nth-child(2){
+          z-index: 2;
+          /* transform: scaleX(1.5); */
+          transform: scale3d(1.5,1,1); /*和上面等价*/
+      }
+      .test2 img:nth-child(2){
+          z-index: 2;
+          /* transform: scaleY(.5); */
+          transform: scale3d(1,.5,1); /*和上面等价*/
+      }
+      .test3 img:nth-child(2){
+          z-index: 2;
+          /* transform: scaleZ(10) rotateX(45deg); */
+          transform: scale3d(1,1,10) rotateX(45deg); /*和上面等价*/
+      }
+      .test4 img:nth-child(2){
+          z-index: 2;
+          transform: scale3d(1,1,.2) rotateX(45deg);
+      }
+     
+    </style>
+</head>
+<body>
+    <div class="demo test1">
+        <div class="content">
+            <img src="./assets/J.jpeg" alt="">
+            <img src="./assets/J.jpeg" alt="">
+        </div>
+    </div>
+    <div class="demo test2">
+        <div class="content">
+            <img src="./assets/J.jpeg" alt="">
+            <img src="./assets/J.jpeg" alt="">
+        </div>
+    </div>
+    <div class="demo test3">
+        <div class="content">
+            <img src="./assets/J.jpeg" alt="">
+            <img src="./assets/J.jpeg" alt="">
+        </div>
+    </div>
+    <div class="demo test4">
+        <div class="content">
+            <img src="./assets/J.jpeg" alt="">
+            <img src="./assets/J.jpeg" alt="">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style type="text/css">
+        .clearfix::after {
+            /*清除浮动*/
+            content: "";
+            /* height:0; */
+            display: block;
+            clear: both;
+        }
+        .box1{
+            width:400px;
+            margin:100px auto;
+            list-style-type: none;
+        }
+        .box1 li{
+            float:left;
+            margin:5px;
+        }
+        .box1 li img{
+            width:120px;
+            height:120px;
+        }
+        .box1:hover li:not(:hover){/*除了当前悬浮的元素*/
+            opacity:.2;
+            filter: alpha(opacity=20);    
+        }
+    </style>
+</head>
+<body>
+    <ul class="box1 clearfix">
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+        <li><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3540602547,1233457299&fm=26&gp=0.jpg"></li>
+      
+    </ul>
+</body>
+</html>

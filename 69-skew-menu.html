@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倾斜导航</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style type='text/css'>
+       .skew-menu ul{
+          margin: 100px;
+          transform: skew(-25deg);
+          list-style: none;
+          padding: 0;
+       }
+       ul li{
+           background-color: #abcdef;
+           float: left;
+           border-right: 1px solid #eee;
+       }
+       ul li a{
+           display: block;
+           padding: 1em 2em;
+           color: #fff;
+           font-weight: 700px;
+           text-decoration: none;
+       }
+       .skew-menu li:hover{
+           background-color: pink;
+       }
+       .skew-menu li:first-child{
+           border-radius: 10px 0 0 10px;
+       }
+       .skew-menu li:last-child{
+           border-radius: 0 10px 10px 0;
+       }
+    </style>
+</head>
+<body>
+    <nav  class='skew-menu'>
+        <ul class='clearfix'>
+            <li><a href='#'>首页</a></li>
+            <li><a href='#'>博客</a></li>
+            <li><a href='#'>资源</a></li>
+            <li><a href='#'>关于</a></li>
+            <li><a href='#'>联系</a></li>
+        </ul>
+    </nav>
+    
+
+</body>
+</html>
